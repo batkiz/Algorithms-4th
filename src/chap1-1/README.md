@@ -12,3 +12,8 @@ https://algs4.cs.princeton.edu/11model/largeW.txt
 https://algs4.cs.princeton.edu/11model/largeT.txt
 
 ## 练习
+### Ex04
+a. Java 中无 `then`
+b. 须将 `a > b` 用置于括号内
+c. 无
+d. `c = 0` 后应有 `;`
