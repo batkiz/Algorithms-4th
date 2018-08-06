@@ -14,3 +14,4 @@
 * [官方 GitHub 仓库](https://github.com/kevin-wayne/algs4)
 * [测试数据](https://algs4.cs.princeton.edu/code/algs4-data.zip)
 * [网友题解](https://github.com/jimmysuncpt/Algorithms)
+* [kyson 的题解](https://www.jianshu.com/u/24d715499bcf)
