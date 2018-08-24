@@ -9,3 +9,7 @@ java -cp '~/algs4.jar:' FixedCapacityStackOfStrings < tobe.txt
 [^1]
 
 [^1]: `~/algs4.jar` 为本地 algs4.jar 路径
+
+## `FixedCapacityStack.java`
+由于书中示例代码使用了类型转换，因此，应使用 `javac FixedCapacityStack -Xlint:unchecked` 进行编译。同时 javac 编译器会抛出警告，可以忽略。
+测试方法同上，需在 wsl 进行。
