@@ -8,6 +8,7 @@
 * jdk 8
 * vscode
 * 官方提供的 [jar 包](https://algs4.cs.princeton.edu/code/algs4.jar)，包含了书中所需的 API，需将该文件加入环境变量 CLASSPATH 中
+* 为实现自动补全，可在 `src` 目录下放一份官方的代码。
 
 ## 相关网址
 * [官方网站](https://algs4.cs.princeton.edu/code/)

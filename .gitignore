@@ -24,3 +24,6 @@ hs_err_pid*
 
 # IntelliJ IDEA
 .idea/
+
+# for auto complete
+/src/edu/
