@@ -1,15 +1,14 @@
-import java.util.Iterator;
-
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
- * Stack
+ * Queue
  */
-public class Stack<Item> implements Iterable<Item> {
+public class Queue<Item> implements Iterable<Item> {
 
-    private Node first; // 栈顶（最近添加的元素）
-    private int N; // 元素数量
+    private Node first; // 指向最早添加的节点的链接
+    private Node last; // 指向最近添加的节点的链接
+    private int N; // 队列中的元素数量
 
     private class Node {
         // 定义了节点的嵌套类
@@ -18,26 +17,32 @@ public class Stack<Item> implements Iterable<Item> {
     }
 
     public boolean isEmpty() {
-        return first == null; // 或： N == 0
+        return first == null; // 或 N == 0
     }
 
     public int size() {
         return N;
     }
 
-    public void push(Item item) {
-        // 向栈顶添加元素
-        Node oldfirst = first;
-        first = new Node();
-        first.item = item;
-        first.next = oldfirst;
+    public void enqueue(Item item) {
+        // 向表尾添加元素
+        Node oldlast = last;
+        last = new Node();
+        last.item = item;
+        last.next = null;
+        if (isEmpty())
+            first = last;
+        else
+            oldlast.next = last;
         N++;
     }
 
-    public Item pop() {
-        // 从栈顶删除元素
+    public Item dequeue() {
+        // 从表头删除元素
         Item item = first.item;
         first = first.next;
+        if (isEmpty())
+            last = null;
         N--;
         return item;
     }
@@ -64,15 +69,15 @@ public class Stack<Item> implements Iterable<Item> {
     }
 
     public static void main(String[] args) {
-        Stack<String> s = new Stack<String>();
-
+        // 创建一个队列并操作字符串入列或出列
+        Queue<String> q = new Queue<String>();
         while (!StdIn.isEmpty()) {
             String item = StdIn.readString();
             if (!item.equals("-"))
-                s.push(item);
-            else if (!s.isEmpty())
-                StdOut.print(s.pop() + " ");
+                q.enqueue(item);
+            else if (!q.isEmpty())
+                StdOut.print(q.dequeue() + " ");
         }
-        StdOut.println("(" + s.size() + " left on stack)");
+        StdOut.println("(" + q.size() + " left on queue)");
     }
 }

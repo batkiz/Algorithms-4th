@@ -5,11 +5,12 @@
 `src` 文件夹为源码，`data` 文件夹为用到的数据文件。
 
 ## 环境
-* jdk 8
+* jdk 8[^1]
 * vscode
 * 官方提供的 [jar 包](https://algs4.cs.princeton.edu/code/algs4.jar)，包含了书中所需的 API，需将该文件加入环境变量 CLASSPATH 中
 * 为实现自动补全，可在 `src` 目录下放一份官方的代码。
 
+[^1]: 由于存在乱码问题，可在环境变量里添加：变量：`JAVA_TOOL_OPTIONS`，值：`-Dfile.encoding=UTF-8`。（Windows 10）
 ## 相关网址
 * [官方网站](https://algs4.cs.princeton.edu/code/)
 * [官方 GitHub 仓库](https://github.com/kevin-wayne/algs4)
