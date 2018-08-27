@@ -29,6 +29,13 @@ public class FixedCapacityStackOfStrings {
         return a[--N];
     }
 
+    /*
+     * Ex 1.3.1
+     */
+    public boolean isFull() {
+        return N == a.length;
+    }
+
     public static void main(String[] args) {
         FixedCapacityStackOfStrings s;
         s = new FixedCapacityStackOfStrings(100);
