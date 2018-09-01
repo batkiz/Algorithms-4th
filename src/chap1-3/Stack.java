@@ -42,6 +42,11 @@ public class Stack<Item> implements Iterable<Item> {
         return item;
     }
 
+    public Item peek() {
+        // 返回栈中最近添加的元素
+        return first.item;
+    }
+
     public Iterator<Item> iterator() {
         return new ListIterator();
     }
