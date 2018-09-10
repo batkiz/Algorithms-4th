@@ -2,11 +2,11 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
- * ThreeSum
+ * ThreeSum enhancement
  */
-public class ThreeSum {
+public class Ex02 {
 
-    public static int count(int[] a) {
+    public static int count(long[] a) {
         // 统计和为 0 的元组的数量
         int N = a.length;
         int cnt = 0;
@@ -19,7 +19,7 @@ public class ThreeSum {
     }
 
     public static void main(String[] args) {
-        int[] a = new In(args[0]).readAllInts();
+        long[] a = new In(args[0]).readAllLongs();
         StdOut.println(count(a));
     }
 }
