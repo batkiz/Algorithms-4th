@@ -26,11 +26,23 @@ public class UF {
     }
 
     public int find(int p) {
-
+        return id[p];
     }
 
     public void union(int p, int q) {
+        // 把 p 和 q 归并到相同的分量中
+        int pID = find(p);
+        int qID = find(q);
 
+        // 如果 p 和 q 已经在相同的分量中则不需要采取任何行对
+        if (pID == qID)
+            return;
+
+        // 将 p 的分量重命名为 q 的名称
+        for (int i = 0; i < id.length; i++)
+            if (id[i] == pID)
+                id[i] = qID;
+        count--;
     }
 
     public static void main(String[] args) {
