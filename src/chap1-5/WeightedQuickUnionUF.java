@@ -1,3 +1,6 @@
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
 /**
  * WeightedQuickUnionUF
  */
@@ -46,5 +49,20 @@ public class WeightedQuickUnionUF {
             sz[i] += sz[j];
         }
         count--;
+    }
+
+    public static void main(String[] args) {
+        // 解决由 StdIn 得到的动态连通性问题
+        int N = StdIn.readInt(); // 读取触点数量
+        WeightedQuickUnionUF uf = new WeightedQuickUnionUF(N); // 初始化 N 个分量
+        while (!StdIn.isEmpty()) {
+            int p = StdIn.readInt();
+            int q = StdIn.readInt(); // 读取整数对
+            if (uf.connected(p, q))
+                continue; // 如果已经连通则忽略
+            uf.union(p, q); // 归并分量
+            StdOut.println(p + " " + q);
+        }
+        StdOut.println(uf.count() + "components");
     }
 }
