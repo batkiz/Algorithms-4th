@@ -37,7 +37,7 @@ public class Example {
 
     public static void main(String[] args) {
         // 从标准输入读取字符串，将它们排序并输出
-        String[] a = In.readStrings();
+        String[] a = new In(args[0]).readStrings();
         sort(a);
         assert isSorted(a);
         show(a);
